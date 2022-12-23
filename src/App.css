@@ -81,6 +81,36 @@ p.success {
 p.danger {
 	color: red;
 }
+/*----------- cursor animation ------*/
+.cursor{
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%,-50%);
+  transition: .1s;
+}
+.cursor2{
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #EB455F;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%,-50%);
+  transition: .15s;
+}
+@media(max-width:900px){
+  .cursor,.cursor2{
+    display: none;
+  }
+}
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;

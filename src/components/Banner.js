@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import headerImg from "../assets/img/header-img2.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
@@ -58,7 +58,9 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Sambeet`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>I'm Sambeet Kumar Khatua. I'm a designer who codes. I've worked internationally, in-house, and remotely on projects for leading brands, agencies, startups, and charities. I care deeply about creating world-class, useful, and beautiful products that help people and make a difference.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <Nav.Link href="#connect">
+                    <button>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  </Nav.Link>
               </div>}
             </TrackVisibility>
           </Col>

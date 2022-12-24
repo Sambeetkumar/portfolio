@@ -81,43 +81,13 @@ p.success {
 p.danger {
 	color: red;
 }
-/*----------- cursor animation ------*/
-.cursor{
-  position: fixed;
-  width: 35px;
-  height: 35px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  transform: translate(-50%,-50%);
-  transition: .1s;
-}
-.cursor2{
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  background-color: #EB455F;
-  border-radius: 50%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  transform: translate(-50%,-50%);
-  transition: .15s;
-}
-@media(max-width:900px){
-  .cursor,.cursor2{
-    display: none;
-  }
-}
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 9999;
+  z-index: 500;
   transition:  0.32s ease-in-out;
 }
 nav.navbar.scrolled {
@@ -125,10 +95,10 @@ nav.navbar.scrolled {
   background-color: rgba(0,0,0,0.6);
   backdrop-filter: blur(8px);
 }
-nav.navbar a.navbar-brand {
-    width: 9%;
+.nav-logo{
+  width: 9%;
 }
-.navbar-brand img {
+.nav-logo img {
   scale: 2.5;
   padding-left: 10px;
 }
@@ -298,6 +268,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
+}
+.banner .connectbtn{
+  width: 35%;
 }
 .banner button {
   color: #fff;

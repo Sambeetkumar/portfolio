@@ -36,9 +36,9 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="#home">
-            <img src={logo} alt="logo" />
-          </Navbar.Brand>
+          <div className="nav-logo">
+          <img src={logo} alt="logo" />
+          </div>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
@@ -50,9 +50,9 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://in.linkedin.com/in/sambeet-kumar-khatua-186bb7214" target="_blank"><img src={navIcon1} alt="linked_in" /></a>
-                <a href="https://en-gb.facebook.com/khatua.sambeet/" target="_blank"><img src={navIcon2} alt="facebook" /></a>
-                <a href="https://www.instagram.com/sambeet_03/" target="_blank"><img src={navIcon3} alt="instagram" /></a>
+                <a href="https://in.linkedin.com/in/sambeet-kumar-khatua-186bb7214" target="_blank" rel="noreferrer"><img src={navIcon1} alt="linked_in" /></a>
+                <a href="https://en-gb.facebook.com/khatua.sambeet/" target="_blank" rel="noreferrer"><img src={navIcon2} alt="facebook" /></a>
+                <a href="https://www.instagram.com/sambeet_03/" target="_blank" rel="noreferrer"><img src={navIcon3} alt="instagram" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

@@ -14,12 +14,13 @@ export const Skills = () => {
   };
   const handleExit = () => {
     $(".progress .progress-bar").each(function () {
-      $(this).css("width", 0 + "%");
+      $(this).css("width",5 + "%");
     });
   };
-  const bg = {
+  const style = {
     background: "linear-gradient(89.8deg, #C34381 11%, #5A2BBA 83.4%)",
-  };
+    width:"5%"
+  }
 
   return (
     <section className="skill" id="skills">
@@ -37,7 +38,7 @@ export const Skills = () => {
               <Waypoint
                 onEnter={handleEnter}
                 onLeave={handleExit}
-                topOffset="20%"
+                topOffset="10%"
                 bottomOffset="27%"
               >
                 <div className="row align-items-center">
@@ -54,7 +55,7 @@ export const Skills = () => {
                           className="progress-bar"
                           id="progress-bar1"
                           role="progressbar"
-                          style={bg}
+                          style={style}
                           aria-valuenow={95}
                           aria-valuemin={0}
                           aria-valuemax={100}
@@ -72,7 +73,7 @@ export const Skills = () => {
                         <div
                           className="progress-bar"
                           role="progressbar"
-                          style={bg}
+                          style={style}
                           aria-valuenow={85}
                           aria-valuemin={0}
                           aria-valuemax={100}
@@ -90,7 +91,7 @@ export const Skills = () => {
                         <div
                           className="progress-bar"
                           role="progressbar"
-                          style={bg}
+                          style={style}
                           aria-valuenow={90}
                           aria-valuemin={0}
                           aria-valuemax={100}
@@ -110,7 +111,7 @@ export const Skills = () => {
                         <div
                           className="progress-bar"
                           role="progressbar"
-                          style={bg}
+                          style={style}
                           aria-valuenow={95}
                           aria-valuemin={0}
                           aria-valuemax={100}
@@ -128,7 +129,7 @@ export const Skills = () => {
                         <div
                           className="progress-bar"
                           role="progressbar"
-                          style={bg}
+                          style={style}
                           aria-valuenow={90}
                           aria-valuemin={0}
                           aria-valuemax={100}
@@ -146,7 +147,7 @@ export const Skills = () => {
                         <div
                           className="progress-bar"
                           role="progressbar"
-                          style={bg}
+                          style={style}
                           aria-valuenow={85}
                           aria-valuemin={0}
                           aria-valuemax={100}

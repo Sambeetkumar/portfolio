@@ -11,6 +11,7 @@ function AnimCursor() {
       outerAlpha={0.2}
       innerScale={0.8}
       outerScale={1.5}
+      trailingSpeed={6}
           outerStyle={{
               border: "1px solid #fff",
           }}

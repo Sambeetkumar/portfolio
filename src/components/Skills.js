@@ -1,62 +1,165 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png";
-import colorSharp2 from "../assets/img/color-sharp2.png"
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import { Waypoint } from "react-waypoint";
+import $ from "jquery";
+import { ImHtmlFive, ImCss3, ImWordpress } from "react-icons/im";
+import { IoLogoAngular } from "react-icons/io";
+import { SiJavascript, SiReact } from "react-icons/si";
 
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
+  const handleEnter = () => {
+    $(".progress .progress-bar").each(function () {
+      $(this).css("width", $(this).attr("aria-valuenow") + "%");
+    });
+  };
+  const handleExit = () => {
+    $(".progress .progress-bar").each(function () {
+      $(this).css("width", 0 + "%");
+    });
+  };
+  const bg = {
+    background: "linear-gradient(89.8deg, #C34381 11%, #5A2BBA 83.4%)",
   };
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>I can be as involved in your project as you need me to be; from the seed of the idea, to sketches, creative direction, design, copywriting, system design, and even the front-end and WordPress build.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image1" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image2" />
-                                <h5>Brand Identity</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image3" />
-                                <h5>Logo Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image4" />
-                                <h5>UI Design</h5>
-                            </div>
-                        </Carousel>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
+              <h2>Skills</h2>
+              <p>
+                I can be as involved in your project as you need me to be; from
+                the seed of the idea, to sketches, creative direction, design,
+                copywriting, system design, and even the front-end and WordPress
+                build.
+              </p>
+              <Waypoint
+                onEnter={handleEnter}
+                onLeave={handleExit}
+                topOffset="20%"
+                bottomOffset="27%"
+              >
+                <div className="row align-items-center">
+                  <div className="col-md-6">
+                    <div className="skill mb-4">
+                      <div className="d-flex justify-content-between">
+                        <h6 className="font-weight-bold">
+                          HTML <ImHtmlFive />
+                        </h6>
+                        <h6 className="font-weight-bold">95%</h6>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          id="progress-bar1"
+                          role="progressbar"
+                          style={bg}
+                          aria-valuenow={95}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                        />
+                      </div>
                     </div>
+                    <div className="skill mb-4">
+                      <div className="d-flex justify-content-between">
+                        <h6 className="font-weight-bold">
+                          CSS <ImCss3 />
+                        </h6>
+                        <h6 className="font-weight-bold">85%</h6>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={bg}
+                          aria-valuenow={85}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                        />
+                      </div>
+                    </div>
+                    <div className="skill">
+                      <div className="d-flex justify-content-between">
+                        <h6 className="font-weight-bold">
+                          Javascript <SiJavascript />
+                        </h6>
+                        <h6 className="font-weight-bold">90%</h6>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={bg}
+                          aria-valuenow={90}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="skill mb-4">
+                      <div className="d-flex justify-content-between">
+                        <h6 className="font-weight-bold">
+                          React JS <SiReact />
+                        </h6>
+                        <h6 className="font-weight-bold">95%</h6>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={bg}
+                          aria-valuenow={95}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                        />
+                      </div>
+                    </div>
+                    <div className="skill mb-4">
+                      <div className="d-flex justify-content-between">
+                        <h6 className="font-weight-bold">
+                          Angular JS <IoLogoAngular />
+                        </h6>
+                        <h6 className="font-weight-bold">90%</h6>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={bg}
+                          aria-valuenow={90}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                        />
+                      </div>
+                    </div>
+                    <div className="skill">
+                      <div className="d-flex justify-content-between">
+                        <h6 className="font-weight-bold">
+                          Wordpress <ImWordpress />
+                        </h6>
+                        <h6 className="font-weight-bold">85%</h6>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={bg}
+                          aria-valuenow={85}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </Waypoint>
             </div>
+          </div>
         </div>
+      </div>
       <img className="background-image-left" src={colorSharp} alt="Image5" />
       <img className="background-image-right" src={colorSharp2} alt="Image6" />
     </section>

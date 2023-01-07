@@ -80,7 +80,7 @@ export const Skills = () => {
                         />
                       </div>
                     </div>
-                    <div className="skill">
+                    <div className="skill mb-4">
                       <div className="d-flex justify-content-between">
                         <h6 className="font-weight-bold">
                           Javascript <SiJavascript />
@@ -136,7 +136,7 @@ export const Skills = () => {
                         />
                       </div>
                     </div>
-                    <div className="skill">
+                    <div className="skill mb-4">
                       <div className="d-flex justify-content-between">
                         <h6 className="font-weight-bold">
                           Wordpress <ImWordpress />

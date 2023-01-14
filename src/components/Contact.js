@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -14,7 +17,6 @@ export const Contact = () => {
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
       setFormDetails({
@@ -22,27 +24,40 @@ export const Contact = () => {
         [category]: value
       })
   }
+  const form = useRef();
 
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-    }
-  };
 
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+      .then(() => {
+        toast.success('Sent successfully !', {
+          position: "bottom-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        });
+        setFormDetails(formInitialDetails);
+        setButtonText("send");
+      }, () => {
+        toast.error('Something went wrong !', {
+          position: "bottom-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        });
+        setButtonText("send");
+      });
+  };
   return (
     <section className="contact" id="connect">
       <Container>
@@ -63,24 +78,28 @@ export const Contact = () => {
           <Col size={12} md={6}>
             <div>
               <h2>Get In Touch</h2>
-              <form onSubmit={handleSubmit}>
+              <form ref={form} onSubmit={sendEmail}>
                 <Row>
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="text"
                       value={formDetails.firstName}
                       placeholder="First Name"
+                      name="f_name"
                       onChange={(e) =>
                         onFormUpdate("firstName", e.target.value)
                       }
+                      required
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="text"
-                      value={formDetails.lasttName}
+                      value={formDetails.lastName}
                       placeholder="Last Name"
+                      name="l_name"
                       onChange={(e) => onFormUpdate("lastName", e.target.value)}
+                      required
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
@@ -88,7 +107,9 @@ export const Contact = () => {
                       type="email"
                       value={formDetails.email}
                       placeholder="Email Address"
+                      name="email"
                       onChange={(e) => onFormUpdate("email", e.target.value)}
+                      required
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
@@ -96,6 +117,7 @@ export const Contact = () => {
                       type="tel"
                       value={formDetails.phone}
                       placeholder="Phone No."
+                      name="tel"
                       onChange={(e) => onFormUpdate("phone", e.target.value)}
                     />
                   </Col>
@@ -104,29 +126,21 @@ export const Contact = () => {
                       rows="6"
                       value={formDetails.message}
                       placeholder="Message"
+                      name="message"
                       onChange={(e) => onFormUpdate("message", e.target.value)}
+                      required
                     ></textarea>
                     <button type="submit">
                       <span>{buttonText}</span>
                     </button>
                   </Col>
-                  {status.message && (
-                    <Col>
-                      <p
-                        className={
-                          status.success === false ? "danger" : "success"
-                        }
-                      >
-                        {status.message}
-                      </p>
-                    </Col>
-                  )}
                 </Row>
               </form>
             </div>
           </Col>
         </Row>
       </Container>
+      <ToastContainer />
     </section>
   );
 };

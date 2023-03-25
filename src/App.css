@@ -234,7 +234,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
-
+@media(width < 768px){
+  nav.navbar {
+    padding: 10px 0px;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+  }
+  nav.navbar.scrolled {
+    padding: 10px 0px;
+  }
+@media(width <= 425px){
+  .nav-logo img{
+    scale: 5;
+  }
+}
+}
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
@@ -309,7 +323,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
   color: #EB455F;
 }
-
+@media(width < 768px){
+  .banner{
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media(width <= 425px){
+  .banner h1{
+    font-size: 50px;
+  }
+  .banner .tagline {
+    font-size: 15px;
+  }
+  .banner .connectbtn{
+    width: 80%;
+    padding-left: 0px;
+  }
+  .banner button{
+    margin-top: 30px;
+  }
+}
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
@@ -349,7 +384,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   z-index: -4;
 }
-
+@media(width <= 425px){
+  .skill-bx{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
@@ -477,7 +517,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
-
+@media(width <= 425px){
+  .project p{
+    width:90%;
+  }
+}
 /************ contacts Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -549,7 +593,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button:hover::before {
   width: 100%;
 }
-
+@media(width<= 768px){
+  .contact form button{
+    margin-left: 40%;
+  }
+}
+@media(width<= 455px){
+  .contact form button{
+    margin-left: 32%;
+  }
+}
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
@@ -570,6 +623,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2em;
+}
+@media(width<=991px){
+  .newsletter-bx{
+  padding: 85px 40px;
+  }
+  .newsletter-bx h3{
+    text-align: center;
+  }
+}
+@media(width>=992px) and (width<=1199px){
+  .newsletter-bx h3{
+    text-align: center;
+  }
+  .newsletter-bx{
+    padding: 85px 150px;
+    }
 }
 .new-email-bx {
   background: #fff;
@@ -630,4 +699,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+@media(width<=575px){
+  .footlogobox{
+    text-align: center !important;
+  }
+  .new-email-bx button{
+    padding: 3% 6%;
+  }
 }

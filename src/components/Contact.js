@@ -61,7 +61,7 @@ export const Contact = () => {
   return (
     <section className="contact" id="connect">
       <Container>
-        <Row className="align-items-center">
+        <Row className="align-items-center contact-row">
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (

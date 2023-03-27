@@ -30,10 +30,7 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                I can be as involved in your project as you need me to be; from
-                the seed of the idea, to sketches, creative direction, design,
-                copywriting, system design, and even the front-end and WordPress
-                build.
+                I am a quick learner and ready to upscale. I am passionate about cutting-edge, pixel-perfect and beautiful interfaces. My skills are listed below.
               </p>
               <Waypoint
                 onEnter={handleEnter}

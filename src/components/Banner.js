@@ -55,7 +55,7 @@ export const Banner = () => {
               <div>
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Sambeet`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I'm Sambeet Kumar Khatua. I'm a designer who codes. I've worked internationally, in-house, and remotely on projects for leading brands, agencies, startups, and charities. I care deeply about creating world-class, useful, and beautiful products that help people and make a difference.</p>
+                  <p>I'm Sambeet Kumar Khatua. I'm a front-end developer based in Odisha, india. I have developed many types of webpages with elegant user interfaces. I care deeply about creating world-class, useful, and beautiful products that help people and make a difference.</p>
                   <Nav.Link href="#connect" className="connectbtn">
                     <button>Let’s Connect <ArrowRightCircle size={25} /></button>
                   </Nav.Link>

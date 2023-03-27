@@ -252,7 +252,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 200px 0 100px 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.380),rgba(0, 0, 0, 0.380)), url("../src/assets/img/banner-bg.jpg");
   background-position: top center;
   background-size: cover;
@@ -331,6 +331,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 @media(width <= 425px){
+  .banner{
+    padding-top: 100px;
+  }
   .banner h1{
     font-size: 50px;
   }
@@ -517,9 +520,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
-@media(width <= 425px){
+@media(width <= 575px){
   .project p{
     width:90%;
+  }
+  .project-row{
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 /************ contacts Css ************/
@@ -600,7 +607,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 @media(width<= 455px){
   .contact form button{
-    margin-left: 32%;
+    margin-left: 31%;
+  }
+  .contact-row{
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 /************ Footer Css ************/

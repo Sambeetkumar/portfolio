@@ -66,7 +66,7 @@ export const Projects = () => {
                   <p>
                     I am able to work well both in a team environment as well as
                     using own initiative. I am able to work well under pressure
-                    and adhere to strict deadlines.Do checkout some of my
+                    and adhere to strict deadlines. Do checkout some of my
                     projects listed below.
                   </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
@@ -92,7 +92,7 @@ export const Projects = () => {
                       }
                     >
                       <Tab.Pane eventKey="first">
-                        <Row>
+                        <Row className="project-row">
                           {projects.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}

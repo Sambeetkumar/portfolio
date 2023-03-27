@@ -2,9 +2,8 @@ import colorSharp from "../assets/img/color-sharp.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import { Waypoint } from "react-waypoint";
 import $ from "jquery";
-import { ImHtmlFive, ImCss3, ImWordpress } from "react-icons/im";
-import { IoLogoAngular } from "react-icons/io";
-import { SiJavascript, SiReact } from "react-icons/si";
+import { ImHtmlFive, ImCss3 } from "react-icons/im";
+import { SiJavascript, SiReact, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
 export const Skills = () => {
   const handleEnter = () => {
@@ -118,7 +117,7 @@ export const Skills = () => {
                     <div className="skill mb-4">
                       <div className="d-flex justify-content-between">
                         <h6 className="font-weight-bold">
-                          Angular JS <IoLogoAngular />
+                          Next JS <SiNextdotjs />
                         </h6>
                         <h6 className="font-weight-bold">90%</h6>
                       </div>
@@ -136,16 +135,16 @@ export const Skills = () => {
                     <div className="skill mb-4">
                       <div className="d-flex justify-content-between">
                         <h6 className="font-weight-bold">
-                          Wordpress <ImWordpress />
+                          Tailwind CSS <SiTailwindcss />
                         </h6>
-                        <h6 className="font-weight-bold">85%</h6>
+                        <h6 className="font-weight-bold">95%</h6>
                       </div>
                       <div className="progress">
                         <div
                           className="progress-bar"
                           role="progressbar"
                           style={style}
-                          aria-valuenow={85}
+                          aria-valuenow={95}
                           aria-valuemin={0}
                           aria-valuemax={100}
                         />

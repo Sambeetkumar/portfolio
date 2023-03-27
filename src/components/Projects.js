@@ -31,16 +31,16 @@ export const Projects = () => {
       link: "https://github.com/Sambeetkumar/Web-Development/tree/master/114%20PricingPanel-CODE/PricingPanel/PriceTableStarter",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "ChatBotX",
+      description: "AI Chatbot",
       imgUrl: projImg4,
-      link: "",
+      link: "https://chat-bot-x.vercel.app",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Metaverse",
+      description: "VR landing page",
       imgUrl: projImg5,
-      link: "",
+      link: "https://meta-sambeetkumar.vercel.app",
     },
     {
       title: "Business Startup",

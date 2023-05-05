@@ -13,41 +13,41 @@ import TrackVisibility from "react-on-screen";
 export const Projects = () => {
   const projects = [
     {
-      title: "Omni Food",
-      description: "Food Delivery",
-      imgUrl: projImg1,
-      link: "https://sambeetkumar.github.io/Omni-Food/",
-    },
-    {
-      title: "Sambeet",
-      description: "Personal Portfolio",
-      imgUrl: projImg2,
-      link: "",
-    },
-    {
-      title: "Pricing Panel",
-      description: "Payment Page",
-      imgUrl: projImg3,
-      link: "https://github.com/Sambeetkumar/Web-Development/tree/master/114%20PricingPanel-CODE/PricingPanel/PriceTableStarter",
-    },
-    {
       title: "ChatBotX",
       description: "AI Chatbot",
       imgUrl: projImg4,
       link: "https://chat-bot-x.vercel.app",
     },
     {
-      title: "Metaverse",
-      description: "VR landing page",
-      imgUrl: projImg5,
-      link: "https://meta-sambeetkumar.vercel.app",
+      title: "Password Generator",
+      description: "Random password generator",
+      imgUrl: projImg6,
+      link: "https://generate-password-sambeetkumar.vercel.app/",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg6,
-      link: "",
+      title: "NoteMaster",
+      description: "Note Keeper",
+      imgUrl: projImg5,
+      link: "https://notemaster-alpha.vercel.app",
     },
+    {
+      title: "Omni Food",
+      description: "Food Delivery",
+      imgUrl: projImg1,
+      link: "https://omnifood-sambeetkumar.netlify.app/",
+    },
+    {
+      title: "Sambeet",
+      description: "Personal Portfolio",
+      imgUrl: projImg2,
+      link: "https://sambeetkumar.github.io/portfolio",
+    },
+    {
+      title: "Pricing Panel",
+      description: "Payment Page",
+      imgUrl: projImg3,
+      link: "https://github.com/Sambeetkumar/Web-Development/tree/master/114%20PricingPanel-CODE/PricingPanel/PriceTableStarter",
+    }
   ];
 
   return (
